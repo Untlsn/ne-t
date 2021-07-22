@@ -7,7 +7,7 @@ describe('repeat', () => {
     const words = Ne.repeat(5, word);
 
     expect(words).toContain(word);
-    expect(words.every((it) => it == word)).toBeTruthy();
+    expect(words.every(Ne.eq.wait(word))).toBeTruthy();
   });
   it('wait should work', () => {
     const word = faker.random.word();
