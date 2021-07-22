@@ -1,3 +1,5 @@
+import { createWaiter, createCurry } from '../helpers/createWaiters';
+
 interface Pick {
     <Obj, Key extends keyof Obj>(obj: Obj, key: Key): Obj[Key]
     wait<Obj>(obj: Obj): <Key extends keyof Obj>(key: Key) => Obj[Key]
@@ -5,5 +7,5 @@ interface Pick {
 }
 
 export const pick: Pick = (obj, key) => obj[key];
-pick.wait = obj => key => pick(obj, key);
-pick.curry = key => obj => pick(obj, key);
+pick.wait = createWaiter(pick);
+pick.curry = createCurry(pick);

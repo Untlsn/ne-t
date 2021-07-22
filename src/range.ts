@@ -1,4 +1,4 @@
-export const range = (from: number) => {
+export const range = (from = 0) => {
   return {
     to: (num: number, step = 1) => {
       const arr: number[] = [];

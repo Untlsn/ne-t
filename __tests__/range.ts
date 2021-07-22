@@ -19,4 +19,8 @@ describe('range', () => {
       0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10,
     ]);
   });
+  it('should create range from 0 if first arg is undefined', () => {
+    const range = Ne.range().to(10);
+    expect(range).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  });
 });
