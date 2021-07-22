@@ -1,0 +1,25 @@
+{
+  "name": "ne-t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^4.28.4",
+    "typescript": "^4.3.5",
+    "@types/faker": "^5.5.7",
+    "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.171",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "eslint": "^7.31.0",
+    "faker": "^5.5.3",
+    "jest": "^27.0.6",
+    "lodash": "^4.17.21",
+    "ts-jest": "^27.0.4"
+  }
+}
