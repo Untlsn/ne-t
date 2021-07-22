@@ -13,5 +13,20 @@ describe('times', () => {
     const arr = Ne.times(10, (i) => i);
     expect(arr).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
+  it('wait should work', () => {
+    const max = faker.datatype.number(10);
+    let count = 0;
+    const xTimes = Ne.times.wait(max);
+    xTimes(() => count++);
 
+    expect(count).toEqual(max);
+  });
+  it('curry should work', () => {
+    const max = faker.datatype.number(10);
+    let count = 0;
+    const incrementCountTimes = Ne.times.curry(() => count++);
+    incrementCountTimes(max);
+
+    expect(count).toEqual(max);
+  });
 });
