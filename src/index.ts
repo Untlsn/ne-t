@@ -1,2 +1,3 @@
-export { pick } from './pick';
-export { map } from './map';
+export * from './pick';
+export * from './map';
+export * from './math';
