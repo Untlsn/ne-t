@@ -1,2 +1,2 @@
-export { pick } from './src/pick';
-export { map } from './src/map';
+export * from './src';
+export * as default from './src';
